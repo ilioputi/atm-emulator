@@ -15,5 +15,28 @@ while(true){
         case '1':
             alert(`Ваш баланс: ${balance}`);
             break
+        case '2':
+            const amountToWithdraw = Number(promt('Введите сумму для снятия'));
+            if(isNaN(amountToWithdraw) || amountToWithdraw <=0) {
+                alert('Ошибка: введена некоректная суммма.');
+            } else if (amountToWithdraw > balance){
+                alert('Ошибка: введена некоректная суммма.');
+            }
+            else {
+                balance -= amountToWithdraw;
+                alert(`Снятие успешно. Ваш баланс: ${balance}`);
+            }
+            break;
+
+        case '3':
+            const amountToDeposit = Number(prompt('Введите сумму для снятия'));
+            if(isNaN(amountToWithdraw) || amountToWithdraw <=0) {
+                alert('Ошибка: введена некоректная суммма.');
+            }
+            else {
+                balance -= amountToDeposit;
+                alert(`Счёт пополнен;. Ваш баланс: ${balance}`)
+            break;
     }
+}
 }
